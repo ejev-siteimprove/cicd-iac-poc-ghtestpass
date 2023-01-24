@@ -1,13 +1,9 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
+  cloud {
+    organization = "FusionIT"
+
+    workspaces {
+      name = "cicd-iac-poc-ghtestpass"
     }
   }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "ca-central-1"
 }
